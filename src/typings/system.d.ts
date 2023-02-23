@@ -14,9 +14,6 @@ declare namespace EnumType {
 
   /** 过渡动画 */
   type ThemeAnimateMode = keyof typeof import('@/enum').EnumThemeAnimateMode;
-
-  /** 登录模块 */
-  type LoginModuleKey = keyof typeof import('@/enum').EnumLoginModule;
 }
 
 /** 请求的相关类型 */
