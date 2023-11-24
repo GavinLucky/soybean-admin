@@ -1,10 +1,15 @@
-import axios from 'axios';
-import type { CreateAxiosDefaults } from 'axios';
+import type { AxiosRequestConfig } from 'axios';
+import { AxiosRequest } from './inner/axiosIndex';
+import type { ICreatOptions, IResponseData } from './type/type';
 
-export function createAxios(config?: CreateAxiosDefaults) {
-  const instance = axios.create(config);
+// export function createAxios(config?: CreateAxiosDefaults) {
+//   const instance = axios.create(config);
+//
+//   return instance;
+// }
 
-  return instance;
+// export default createAxios;
+
+export function createAxios<O = any, E = any>(cfg1: AxiosRequestConfig, cfg2: ICreatOptions<O, E>) {
+  return new AxiosRequest<O, E>(cfg1, cfg2);
 }
-
-export default createAxios;

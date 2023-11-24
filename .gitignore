@@ -33,3 +33,5 @@ package-lock.json
 yarn.lock
 
 .VSCodeCounter
+!/packages/request/src/axios/inner/axiosIndex.ts
+!/packages/request/src/axios/inner/axiosIndex.ts
